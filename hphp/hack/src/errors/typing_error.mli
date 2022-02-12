@@ -1253,6 +1253,7 @@ module Primary : sig
         class_pos: Pos_or_decl.t;
         member_name: string;
         hint: ([ `instance | `static ] * Pos_or_decl.t * string) option;
+        quickfixes: Quickfix.t list;
       }
     | Type_arity_mismatch of {
         pos: Pos.t;
@@ -1304,6 +1305,7 @@ module Secondary : sig
         class_pos: Pos_or_decl.t;
         member_name: string;
         hint: ([ `instance | `static ] * Pos_or_decl.t * string) option;
+        quickfixes: Quickfix.t list;
       }
     | Type_arity_mismatch of {
         pos: Pos_or_decl.t;
